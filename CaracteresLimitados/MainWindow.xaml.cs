@@ -33,12 +33,6 @@ namespace CaracteresLimitados
             contadorCaracteresEscritos = escrituraTextBox.Text.Length;
         }
 
-        private void numeroCaracteresTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            numeroCaracteresTextBox.Text = 
-
-
-           
-        }
+        
     }
 }
