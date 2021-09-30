@@ -20,19 +20,22 @@ namespace CaracteresLimitados
     /// </summary>
     public partial class MainWindow : Window
     {
-        int contadorCaracteresEscritos = 0;
        
         public MainWindow()
         {
             InitializeComponent();
-            numeroCaracteresTextBox.Text = contadorCaracteresEscritos.ToString();
 
         }
         private void escrituraTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            contadorCaracteresEscritos = escrituraTextBox.Text.Length;
+            numeroCaracteresTextBox.Text = escrituraTextBox.Text.Length.ToString() + "/140";
+
+            if (escrituraTextBox.Text.Length >= 140)
+            {
+                escrituraTextBox.IsReadOnly = true;
+            }
         }
 
-        
+
     }
 }
